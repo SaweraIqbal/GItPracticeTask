@@ -10,11 +10,13 @@ const App = () => {
         setItems(items.filter((_, i) => i !==index));
    }
   return (
-    <div>
-      <h1>Task List</h1>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="bg-white p-8 rounded shadow-md">
+      <h1 className="text-2xl font-bold mb-4">Task List</h1>
       <TaskInput  handleItems = {handleItems}/>
-      <TaskList  items = {items} DeleteItem = {DeleteItem}/>
+      <TaskList  items = {items} deleteItem = {DeleteItem}/>
     </div>
+  </div>
   )
 }
 
