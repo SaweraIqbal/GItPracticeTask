@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TaskInput from './components/TaskInput'
+import TaskList from './components/TaskList';
 const App = () => {
   const [items, setItems] = useState([]);
    const handleItems = (newTask) =>{
@@ -9,12 +10,7 @@ const App = () => {
     <div>
       <h1>Task List</h1>
       <TaskInput  handleItems = {handleItems}/>
-
-      <ul>
-        {items.map((item, index)=>(
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <TaskList  items = {items}/>
     </div>
   )
 }
